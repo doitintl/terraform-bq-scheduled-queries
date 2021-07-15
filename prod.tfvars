@@ -1,0 +1,6 @@
+project_id = "my-prod-project"
+dataset_id = "test_dataset"
+source_table = "test_table"
+target_table = "scheduled_table"
+sql_file = "prod_scheduled_query.sql"
+schedule = "every 1 hour"

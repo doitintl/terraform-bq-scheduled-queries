@@ -1,0 +1,14 @@
+steps:
+- id: 'BigQuery dry-run - Prod'
+  name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - ENV=prod make validate-sql
+
+- id: 'Terraform plan'
+  name: 'hashicorp/terraform:1.0.0'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - apk add --update make && ENV=prod make plan
