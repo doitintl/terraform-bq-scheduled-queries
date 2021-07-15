@@ -33,7 +33,7 @@ github:
 ### CI tasks
 Any new code commit will trigger a Cloud Build build to run the CI process.
 It contains two steps:
-1. Validate BigQuery SQL query using bq cli with dry-run parameters.
+1. Validate BigQuery SQL query using bq cli with [dry-run](https://cloud.google.com/bigquery/docs/dry-run-queries) parameters.
 2. Terraform plan to validate and show new changes.
 
 ## CD
